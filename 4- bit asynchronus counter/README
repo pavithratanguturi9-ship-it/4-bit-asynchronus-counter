@@ -1,0 +1,68 @@
+# 4-Bit Asynchronous (Ripple) Counter
+
+## Objective
+Design and simulate a 4-bit asynchronous binary counter using Verilog HDL.
+
+## Description
+A 4-bit asynchronous counter, also known as a ripple counter, consists of four flip-flops connected in series. The first flip-flop is driven by the external clock, while each subsequent flip-flop is triggered by the output of the previous flip-flop. Due to this cascading arrangement, changes ripple through the circuit, introducing a small propagation delay.
+
+## Files
+
+- async_counter.v
+- tb_async_counter.v
+- README.md
+
+## Inputs
+
+- clk : Clock signal
+- reset : Asynchronous reset
+
+## Outputs
+
+- q[3:0] : 4-bit counter output
+
+## Counting Sequence
+
+0000
+0001
+0010
+0011
+0100
+0101
+0110
+0111
+1000
+1001
+1010
+1011
+1100
+1101
+1110
+1111
+
+## Simulation
+
+1. Compile the design.
+2. Compile the testbench.
+3. Run the simulation.
+4. Observe the waveform or console output.
+
+## Tools
+
+- Xilinx Vivado
+- ModelSim
+- QuestaSim
+- Icarus Verilog
+- GTKWave
+
+## Applications
+
+- Frequency division
+- Digital clocks
+- Event counting
+- Timing circuits
+- Sequential logic design
+
+## Conclusion
+
+The implemented design successfully demonstrates a 4-bit asynchronous (ripple) counter. The counter increments from 0 to 15 and then wraps around to 0. Since each stage is triggered by the previous stage's output rather than the main clock, the design exhibits the ripple effect characteristic of asynchronous counters.
